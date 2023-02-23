@@ -6,275 +6,314 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .gradient-custom-2 {
-/* fallback for old browsers */
-background: #a1c4fd;
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:weight@100;200;300;400;500;600;700;800&display=swap");
 
-/* Chrome 10-25, Safari 5.1-6 */
-background: -webkit-linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1));
 
-/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-background: linear-gradient(to right, rgba(161, 196, 253, 1), rgba(194, 233, 251, 1))
+body{
+ background-color:#f5eee7;
+ font-family: "Poppins", sans-serif;
+ font-weight: 300;
 }
 
-#progressbar-1 {
-color: #455A64;
+.container{
+
+ height: 100vh;
+
 }
 
-#progressbar-1 li {
-list-style-type: none;
-font-size: 13px;
-width: 33.33%;
-float: left;
+.card{
+
+ border: none;
+}
+
+.card-header {
+     padding: .5rem 1rem;
+     margin-bottom: 0;
+     background-color: rgba(0,0,0,.03);
+     border-bottom: none;
+ }
+
+ .btn-light:focus {
+     color: #212529;
+     background-color: #e2e6ea;
+     border-color: #dae0e5;
+     box-shadow: 0 0 0 0.2rem rgba(216,217,219,.5);
+ }
+
+ .form-control{
+
+   height: 50px;
+border: 2px solid #eee;
+border-radius: 6px;
+font-size: 14px;
+ }
+
+ .form-control:focus {
+color: #495057;
+background-color: #fff;
+border-color: #039be5;
+outline: 0;
+box-shadow: none;
+
+}
+
+.input{
+
 position: relative;
 }
 
-#progressbar-1 #step1:before {
-content: "1";
-color: #fff;
-width: 29px;
-margin-left: 22px;
-padding-left: 11px;
+.input i{
+
+   position: absolute;
+top: 16px;
+left: 11px;
+color: #989898;
 }
 
-#progressbar-1 #step2:before {
-content: "2";
-color: #fff;
-width: 29px;
+.input input{
+
+text-indent: 25px;
 }
 
-#progressbar-1 #step3:before {
-content: "3";
-color: #fff;
-width: 29px;
-margin-right: 22px;
-text-align: center;
+.card-text{
+
+font-size: 13px;
+margin-left: 6px;
 }
 
-#progressbar-1 li:before {
-line-height: 29px;
-display: block;
+.certificate-text{
+
 font-size: 12px;
-background: #455A64;
-border-radius: 50%;
-margin: auto;
 }
 
-#progressbar-1 li:after {
-content: '';
-width: 121%;
-height: 2px;
-background: #455A64;
-position: absolute;
-left: 0%;
-right: 0%;
-top: 15px;
-z-index: -1;
+
+.billing{
+font-size: 11px;
+}  
+
+.super-price{
+
+   top: 0px;
+font-size: 22px;
 }
 
-#progressbar-1 li:nth-child(2):after {
-left: 50%
+.super-month{
+
+   font-size: 11px;
 }
 
-#progressbar-1 li:nth-child(1):after {
-left: 25%;
-width: 121%
+
+.line{
+color: #bfbdbd;
 }
 
-#progressbar-1 li:nth-child(3):after {
-left: 25%;
-width: 50%;
+.free-button{
+
+   background: #1565c0;
+height: 52px;
+font-size: 15px;
+border-radius: 8px;
 }
 
-#progressbar-1 li.active:before,
-#progressbar-1 li.active:after {
-background: #1266f1;
-}
 
-.card-stepper {
-z-index: 0
+.payment-card-body{
+
+flex: 1 1 auto;
+padding: 24px 1rem !important;
+
 }
     </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"  rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"  rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"  rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css"  rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
   
-      <section style="background-color: #eee;">
-        <div class="container py-5">
-          <div class="row">
-            <div class="col">
-              <nav aria-label="breadcrumb" class="bg-light rounded-3 p-3 mb-4">
-                <ol class="breadcrumb mb-0">
-                  <li class="breadcrumb-item"><a href="#">Home</a></li>
-                  <li class="breadcrumb-item"><a href="#">User</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">User Profile</li>
-                </ol>
-              </nav>
-            </div>
-          </div>
-      
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="card mb-4">
-                <div class="card-body text-center">
-                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
-                    class="rounded-circle img-fluid" style="width: 150px;">
-                  <h5 class="my-3">John Smith</h5>
-                  <p class="text-muted mb-1">Full Stack Developer</p>
-                  <p class="text-muted mb-4">Bay Area, San Francisco, CA</p>
-                  <div class="d-flex justify-content-center mb-2">
-                    <button type="button" class="btn btn-primary">Follow</button>
-                    <button type="button" class="btn btn-outline-primary ms-1">Message</button>
-                  </div>
-                </div>
+  <div class="container d-flex justify-content-center mt-5 mb-5">
+
+            
+
+    <div class="row g-3">
+
+      <div class="col-md-6">  
+        
+        <span>Payment Method</span>
+        <div class="card">
+
+          <div class="accordion" id="accordionExample">
+            
+            <div class="card">
+              <div class="card-header p-0" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn btn-light btn-block text-left collapsed p-3 rounded-0 border-bottom-custom" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <div class="d-flex align-items-center justify-content-between">
+
+                      <span>Paypal</span>
+                      <img src="7kQEsHU.png" width="30">
+                      
+                    </div>
+                  </button>
+                </h2>
               </div>
-              <div class="card mb-4 mb-lg-0">
-                <div class="card-body p-0">
-                  <ul class="list-group list-group-flush rounded-3">
-                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                      <i class="fas fa-globe fa-lg text-warning"></i>
-                      <p class="mb-0">https://mdbootstrap.com</p>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                      <i class="fab fa-github fa-lg" style="color: #333333;"></i>
-                      <p class="mb-0">mdbootstrap</p>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                      <i class="fab fa-twitter fa-lg" style="color: #55acee;"></i>
-                      <p class="mb-0">@mdbootstrap</p>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                      <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
-                      <p class="mb-0">mdbootstrap</p>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                      <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
-                      <p class="mb-0">mdbootstrap</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-8">
-              <div class="card mb-4">
+              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
                 <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0">Full Name</p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">Johnatan Smith</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0">Email</p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">example@example.com</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0">Phone</p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">(097) 234-5678</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0">Mobile</p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">(098) 765-4321</p>
-                    </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <p class="mb-0">Address</p>
-                    </div>
-                    <div class="col-sm-9">
-                      <p class="text-muted mb-0">Bay Area, San Francisco, CA</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="card mb-4 mb-md-0">
-                    <div class="card-body">
-                      <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
-                      </p>
-                      <p class="mb-1" style="font-size: .77rem;">Web Design</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
-                      <div class="progress rounded mb-2" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="card mb-4 mb-md-0">
-                    <div class="card-body">
-                      <p class="mb-4"><span class="text-primary font-italic me-1">assigment</span> Project Status
-                      </p>
-                      <p class="mb-1" style="font-size: .77rem;">Web Design</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Website Markup</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 72%" aria-valuenow="72"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">One Page</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 89%" aria-valuenow="89"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Mobile Template</p>
-                      <div class="progress rounded" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 55%" aria-valuenow="55"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <p class="mt-4 mb-1" style="font-size: .77rem;">Backend API</p>
-                      <div class="progress rounded mb-2" style="height: 5px;">
-                        <div class="progress-bar" role="progressbar" style="width: 66%" aria-valuenow="66"
-                          aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                    </div>
-                  </div>
+                  <input type="text" class="form-control" placeholder="Paypal email">
                 </div>
               </div>
             </div>
+
+            <div class="card">
+              <div class="card-header p-0">
+                <h2 class="mb-0">
+                  <button class="btn btn-light btn-block text-left p-3 rounded-0" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <div class="d-flex align-items-center justify-content-between">
+
+                      <span>Credit card</span>
+                      <div class="icons">
+                        <img src="https://i.imgur.com/2ISgYja.png" width="30">
+                        <img src="https://i.imgur.com/W1vtnOV.png" width="30">
+                        <img src="https://i.imgur.com/35tC99g.png" width="30">
+                        <img src="https://i.imgur.com/2ISgYja.png" width="30">
+                      </div>
+                      
+                    </div>
+                  </button>
+                </h2>
+              </div>
+
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body payment-card-body">
+                  
+                  <span class="font-weight-normal card-text">Card Number</span>
+                  <div class="input">
+
+                    <i class="fa fa-credit-card"></i>
+                    <input type="text" class="form-control" placeholder="0000 0000 0000 0000">
+                    
+                  </div> 
+
+                  <div class="row mt-3 mb-3">
+
+                    <div class="col-md-6">
+
+                      <span class="font-weight-normal card-text">Expiry Date</span>
+                      <div class="input">
+
+                        <i class="fa fa-calendar"></i>
+                        <input type="text" class="form-control" placeholder="MM/YY">
+                        
+                      </div> 
+                      
+                    </div>
+
+
+                    <div class="col-md-6">
+
+                      <span class="font-weight-normal card-text">CVC/CVV</span>
+                      <div class="input">
+
+                        <i class="fa fa-lock"></i>
+                        <input type="text" class="form-control" placeholder="000">
+                        
+                      </div> 
+                      
+                    </div>
+                    
+
+                  </div>
+
+                  <span class="text-muted certificate-text"><i class="fa fa-lock"></i> Your transaction is secured with ssl certificate</span>
+                 
+                </div>
+              </div>
+            </div>
+            
           </div>
+          
         </div>
-      </section>
+
+      </div>
+
+      <div class="col-md-6">
+          <span>Summary</span>
+
+          <div class="card">
+
+            <div class="d-flex justify-content-between p-3">
+
+              <div class="d-flex flex-column">
+
+                <span>Pro(Billed Monthly) <i class="fa fa-caret-down"></i></span>
+                <a href="#" class="billing">Save 20% with annual billing</a>
+                
+              </div>
+
+              <div class="mt-1">
+                <sup class="super-price">$9.99</sup>
+                <span class="super-month">/Month</span>
+              </div>
+              
+            </div>
+
+            <hr class="mt-0 line">
+
+            <div class="p-3">
+
+              <div class="d-flex justify-content-between mb-2">
+
+                <span>Refferal Bonouses</span>
+                <span>-$2.00</span>
+                
+              </div>
+
+              <div class="d-flex justify-content-between">
+
+                <span>Vat <i class="fa fa-clock-o"></i></span>
+                <span>-20%</span>
+                
+              </div>
+              
+
+            </div>
+
+            <hr class="mt-0 line">
+
+
+            <div class="p-3 d-flex justify-content-between">
+
+              <div class="d-flex flex-column">
+
+                <span>Today you pay(US Dollars)</span>
+                <small>After 30 days $9.59</small>
+                
+              </div>
+              <span>$0</span>
+
+              
+
+            </div>
+
+
+            <div class="p-3">
+
+            <button class="btn btn-primary btn-block free-button">Try it free for 30 days</button> 
+           <div class="text-center">
+             <a href="#">Have a promo code?</a>
+           </div>
+              
+            </div>
+
+
+
+            
+          </div>
+      </div>
+      
+    </div>
+    
+
+  </div>
 </body>
 </html>
